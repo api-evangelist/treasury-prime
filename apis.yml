@@ -1,0 +1,29 @@
+aid: treasury-prime
+url: https://raw.githubusercontent.com/api-evangelist/treasury-prime/refs/heads/main/apis.yml
+name: Treasury Prime
+x-type: company
+description: >-
+  Treasury Prime offers embedded banking APIs connected to a network of partner banks. Companies access accounts, payments, cards, and FBO programs through a single integration.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Fintech
+  - BaaS
+  - Banking
+  - Embedded Finance
+  - API
+created: '2026-05-08'
+modified: '2026-05-08'
+specificationVersion: '0.19'
+apis: []
+common:
+  - type: Website
+    url: https://www.treasuryprime.com/
+  - type: Plans
+    url: plans/treasury-prime-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/treasury-prime-rate-limits.yml
+  - type: FinOps
+    url: finops/treasury-prime-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
