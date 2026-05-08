@@ -2,28 +2,55 @@ aid: treasury-prime
 url: https://raw.githubusercontent.com/api-evangelist/treasury-prime/refs/heads/main/apis.yml
 name: Treasury Prime
 x-type: company
-description: >-
-  Treasury Prime offers embedded banking APIs connected to a network of partner banks. Companies access accounts, payments, cards, and FBO programs through a single integration.
+description: Treasury Prime is an embedded banking platform connecting fintechs and
+  enterprises to a network of partner banks. Provides REST APIs for persons, businesses,
+  accounts, cards, payments (ACH, wire, book), transactions, statements, and webhooks.
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Fintech
-  - BaaS
-  - Banking
-  - Embedded Finance
-  - API
+- FinTech
+- BaaS
+- Banking
+- Payments
+- Card Issuing
+- ACH
 created: '2026-05-08'
 modified: '2026-05-08'
 specificationVersion: '0.19'
-apis: []
+apis:
+- aid: treasury-prime:rest-api
+  name: Treasury Prime Bank API
+  description: REST API covering Persons, Businesses, Accounts, Cards, Payments (ACH,
+    Wire, Book), Transactions, Statements, Counterparties, External Transfers, and
+    Webhooks across a network of sponsor banks.
+  humanURL: https://developers.treasuryprime.com/
+  baseURL: https://sandbox.treasuryprime.com/v1
+  tags:
+  - REST
+  - Banking
+  - Payments
+  properties:
+  - type: Documentation
+    url: https://developers.treasuryprime.com/
+- aid: treasury-prime:webhooks
+  name: Treasury Prime Webhooks
+  description: Outbound HTTP webhook delivery for account, card, transaction, payment,
+    and KYC events.
+  humanURL: https://developers.treasuryprime.com/docs/webhooks
+  baseURL: https://sandbox.treasuryprime.com/v1/webhooks
+  tags:
+  - Webhooks
+  properties:
+  - type: Documentation
+    url: https://developers.treasuryprime.com/docs/webhooks
 common:
-  - type: Website
-    url: https://www.treasuryprime.com/
-  - type: Plans
-    url: plans/treasury-prime-plans-pricing.yml
-  - type: RateLimits
-    url: rate-limits/treasury-prime-rate-limits.yml
-  - type: FinOps
-    url: finops/treasury-prime-finops.yml
+- type: Website
+  url: https://www.treasuryprime.com/
+- type: Plans
+  url: plans/treasury-prime-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/treasury-prime-rate-limits.yml
+- type: FinOps
+  url: finops/treasury-prime-finops.yml
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com

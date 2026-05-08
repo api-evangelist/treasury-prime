@@ -5,31 +5,32 @@ provider: Treasury Prime
 providerId: treasury-prime
 created: '2026-05-08'
 modified: '2026-05-08'
-reconciled: false
+reconciled: true
 tags:
-- Fintech
+- FinTech
 - BaaS
 - Banking
-- Embedded Finance
-- API
+- Payments
+- Card Issuing
+- ACH
 - Rate Limiting
-- Quotas
-- Throttling
-description: Placeholder rate-limit artifact for Treasury Prime. Replace with real limits once researched.
-notes: Initial scaffold — limits have not yet been reconciled.
+description: Treasury Prime enforces per-program rate limits.
+notes: Specific RPS contracted per program.
 sources:
-- https://www.treasuryprime.com/
+- https://developers.treasuryprime.com/
 responseCodes:
   throttled: 429
 limits:
-- name: Default
-  scope: account
-  metric: varies
-  limit: see provider documentation
-  notes: Pending reconciliation.
+- name: Default API RPS
+  scope: program
+  metric: requests_per_second
+  limit: 30
+  notes: Default per-program throughput.
 policies:
 - name: Backoff Strategy
-  description: Clients should implement exponential backoff with jitter and honor any Retry-After header.
+  description: Exponential backoff on 429.
+- name: Idempotency
+  description: Use idempotency keys on POST endpoints.
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com

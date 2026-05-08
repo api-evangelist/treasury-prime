@@ -5,18 +5,19 @@ provider: Treasury Prime
 providerId: treasury-prime
 created: '2026-05-08'
 modified: '2026-05-08'
-reconciled: false
+reconciled: true
 tags:
-- Fintech
+- FinTech
 - BaaS
 - Banking
-- Embedded Finance
-- API
+- Payments
+- Card Issuing
+- ACH
 - FinOps
-- Cost Management
 - FOCUS
-description: FOCUS-aligned FinOps placeholder for Treasury Prime. Pipeline will replace with real billing details.
-notes: Initial scaffold — billing model has not yet been reconciled.
+description: 'Treasury Prime bills under contract: monthly platform fee, per-transaction,
+  per-card, ACH/wire, with deposit-share economics with the partner bank.'
+notes: Invoiced via Treasury Prime.
 sources:
 - https://www.treasuryprime.com/
 - https://focus.finops.org/focus-specification/v1-3/
@@ -27,9 +28,9 @@ alignedWith:
   dataSpecVersion: '1.3'
   dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
 publisherName: Treasury Prime
-serviceCategory: Fintech
+serviceCategory: FinTech
 billingModel:
-  pricingCategory: To Be Reconciled
+  pricingCategory: Subscription + Usage
   billingFrequency: Monthly
   billingCurrency: USD
   chargeCategories:
@@ -38,29 +39,41 @@ billingModel:
   - Adjustment
 focusColumns:
   ServiceName: Treasury Prime
-  ServiceCategory: Fintech
+  ServiceCategory: BaaS
   ProviderName: Treasury Prime
   PublisherName: Treasury Prime
   InvoiceIssuerName: Treasury Prime
   BillingCurrency: USD
   ChargeCategory: Usage
 meters:
-- name: api_usage
-  description: Catch-all meter pending reconciliation.
-  unit: varies
+- name: transactions
+  description: Account transactions processed.
+  unit: transaction
   aggregation: sum
   dimensions:
-  - account
-  - resource
+  - program
+  - bank
+- name: active_cards
+  description: Active cards.
+  unit: card
+  aggregation: max
+  dimensions:
+  - program
+- name: ach_transfers
+  description: ACH transfers.
+  unit: transfer
+  aggregation: sum
+  dimensions:
+  - program
 principles:
 - name: Visibility
-  description: Pull provider invoices or usage exports until a self-serve usage feed is documented.
+  description: Use Treasury Prime reporting endpoints and statements API.
 - name: Allocation
-  description: Tag invoice line items to consuming business units in your FinOps store.
+  description: Tag accounts and cards per business unit.
 - name: Optimization
-  description: Levers depend on the provider's billing model; review at renewal once reconciled.
+  description: Use book transfers within the network where possible.
 - name: Accountability
-  description: Assign a contract owner to review billing against negotiated terms.
+  description: Program owners review fees vs minimums.
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
