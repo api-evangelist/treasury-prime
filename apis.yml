@@ -1,7 +1,7 @@
 aid: treasury-prime
 url: https://raw.githubusercontent.com/api-evangelist/treasury-prime/refs/heads/main/apis.yml
 name: Treasury Prime
-x-type: company
+kind: company
 description: Treasury Prime is an embedded banking platform connecting fintechs and
   enterprises to a network of partner banks. Provides REST APIs for persons, businesses,
   accounts, cards, payments (ACH, wire, book), transactions, statements, and webhooks.
