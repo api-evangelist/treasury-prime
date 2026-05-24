@@ -1,0 +1,403 @@
+openapi: 3.1.0
+info:
+  title: Treasury Prime Bank API
+  version: "1"
+  description: |
+    REST API covering Accounts, Persons, Businesses, Cards, Payments
+    (ACH, Wire, Book, Check), Transactions, Statements, and Webhooks across
+    Treasury Prime's network of sponsor banks. Endpoints derived from
+    https://docs.treasuryprime.com/.
+  contact:
+    name: Treasury Prime
+    url: https://developers.treasuryprime.com/
+servers:
+  - url: https://api.sandbox.treasuryprime.com
+    description: Sandbox
+security:
+  - BasicAuth: []
+tags:
+  - name: Health
+  - name: Accounts
+  - name: Persons
+  - name: Businesses
+  - name: Cards
+  - name: Payments
+  - name: Transactions
+  - name: Statements
+  - name: Webhooks
+paths:
+  /ping:
+    get:
+      tags: [Health]
+      summary: Health check
+      responses:
+        "200":
+          description: Pong
+  /account:
+    get:
+      tags: [Accounts]
+      summary: List accounts
+      responses:
+        "200":
+          description: Account list
+  /account/{id}:
+    get:
+      tags: [Accounts]
+      summary: Fetch an account
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Account
+    patch:
+      tags: [Accounts]
+      summary: Update an account
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Updated
+  /person/{id}:
+    get:
+      tags: [Persons]
+      summary: Fetch a person
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Person
+    patch:
+      tags: [Persons]
+      summary: Update a person
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Updated
+  /business:
+    get:
+      tags: [Businesses]
+      summary: List businesses
+      responses:
+        "200":
+          description: Businesses
+  /business/{id}:
+    get:
+      tags: [Businesses]
+      summary: Fetch a business
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Business
+    patch:
+      tags: [Businesses]
+      summary: Update a business
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Updated
+  /card:
+    get:
+      tags: [Cards]
+      summary: List cards
+      responses:
+        "200":
+          description: Cards
+    post:
+      tags: [Cards]
+      summary: Create a card
+      responses:
+        "200":
+          description: Created
+  /card/{id}:
+    get:
+      tags: [Cards]
+      summary: Fetch a card
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Card
+    patch:
+      tags: [Cards]
+      summary: Update a card
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Updated
+  /ach:
+    get:
+      tags: [Payments]
+      summary: List ACH transfers
+      responses:
+        "200":
+          description: ACH list
+    post:
+      tags: [Payments]
+      summary: Create an ACH transfer
+      responses:
+        "200":
+          description: ACH created
+  /ach/{id}:
+    get:
+      tags: [Payments]
+      summary: Fetch an ACH transfer
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: ACH
+    patch:
+      tags: [Payments]
+      summary: Update an ACH transfer
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Updated
+  /book:
+    get:
+      tags: [Payments]
+      summary: List book transfers
+      responses:
+        "200":
+          description: Book transfer list
+    post:
+      tags: [Payments]
+      summary: Create a book transfer
+      responses:
+        "200":
+          description: Created
+  /book/{id}:
+    get:
+      tags: [Payments]
+      summary: Fetch a book transfer
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Book transfer
+    patch:
+      tags: [Payments]
+      summary: Update a book transfer
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Updated
+  /check:
+    get:
+      tags: [Payments]
+      summary: List issued checks
+      responses:
+        "200":
+          description: Checks
+    post:
+      tags: [Payments]
+      summary: Issue a check
+      responses:
+        "200":
+          description: Created
+  /check/{id}:
+    get:
+      tags: [Payments]
+      summary: Fetch an issued check
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Check
+    patch:
+      tags: [Payments]
+      summary: Update an issued check
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Updated
+  /check_deposit:
+    get:
+      tags: [Payments]
+      summary: List check deposits
+      responses:
+        "200":
+          description: Deposits
+    post:
+      tags: [Payments]
+      summary: Create a check deposit
+      responses:
+        "200":
+          description: Created
+  /check_deposit/{id}:
+    get:
+      tags: [Payments]
+      summary: Fetch a check deposit
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Deposit
+  /transaction:
+    get:
+      tags: [Transactions]
+      summary: List transactions
+      responses:
+        "200":
+          description: Transactions
+  /transaction/{id}:
+    get:
+      tags: [Transactions]
+      summary: Fetch a transaction
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Transaction
+    patch:
+      tags: [Transactions]
+      summary: Update a transaction
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Updated
+  /account/statement:
+    get:
+      tags: [Statements]
+      summary: Fetch a statement
+      responses:
+        "200":
+          description: Statement
+    post:
+      tags: [Statements]
+      summary: Generate a statement
+      responses:
+        "200":
+          description: Generated
+  /webhook:
+    get:
+      tags: [Webhooks]
+      summary: List webhooks
+      responses:
+        "200":
+          description: Webhooks
+    post:
+      tags: [Webhooks]
+      summary: Create a webhook
+      responses:
+        "200":
+          description: Created
+  /webhook/{id}:
+    get:
+      tags: [Webhooks]
+      summary: Fetch a webhook
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Webhook
+    patch:
+      tags: [Webhooks]
+      summary: Update a webhook
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Updated
+    delete:
+      tags: [Webhooks]
+      summary: Delete a webhook
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        "204":
+          description: Deleted
+components:
+  securitySchemes:
+    BasicAuth:
+      type: http
+      scheme: basic
+      description: HTTP Basic Auth using API Key ID (username) and Secret (password).
