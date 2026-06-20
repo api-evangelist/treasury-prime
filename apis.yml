@@ -5,7 +5,7 @@ kind: company
 description: Treasury Prime is an embedded banking platform connecting fintechs and
   enterprises to a network of partner banks. Provides REST APIs for persons, businesses,
   accounts, cards, payments (ACH, wire, book), transactions, statements, and webhooks.
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - FinTech
   - BaaS
