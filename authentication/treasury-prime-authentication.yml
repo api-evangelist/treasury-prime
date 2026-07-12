@@ -1,0 +1,13 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/treasury-prime-openapi.yml
+summary:
+  types:
+  - http
+schemes:
+- name: BasicAuth
+  type: http
+  scheme: basic
+  description: HTTP Basic Auth using API Key ID (username) and Secret (password).
+  sources:
+  - openapi/treasury-prime-openapi.yml

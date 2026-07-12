@@ -43,6 +43,10 @@ apis:
     - type: Documentation
       url: https://developers.treasuryprime.com/docs/webhooks
 common:
+  - type: DomainSecurity
+    url: security/treasury-prime-domain-security.yml
+  - type: Authentication
+    url: authentication/treasury-prime-authentication.yml
   - type: GitHubOrganization
     url: https://github.com/treasuryprime
   - type: LinkedIn
@@ -55,6 +59,8 @@ common:
     url: rate-limits/treasury-prime-rate-limits.yml
   - type: FinOps
     url: finops/treasury-prime-finops.yml
+  - url: https://www.treasuryprime.com/blog
+    type: Blog
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
