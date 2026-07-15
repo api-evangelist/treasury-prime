@@ -43,6 +43,8 @@ apis:
     - type: Documentation
       url: https://developers.treasuryprime.com/docs/webhooks
 common:
+  - type: AgenticAccess
+    url: agentic-access/treasury-prime-agentic-access.yml
   - type: DomainSecurity
     url: security/treasury-prime-domain-security.yml
   - type: Authentication
