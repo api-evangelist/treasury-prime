@@ -1,0 +1,65 @@
+openapi: 3.1.0
+info:
+  title: Treasury Prime Bank Accounts Transactions API
+  version: '1'
+  description: 'REST API covering Accounts, Persons, Businesses, Cards, Payments
+
+    (ACH, Wire, Book, Check), Transactions, Statements, and Webhooks across
+
+    Treasury Prime''s network of sponsor banks. Endpoints derived from
+
+    https://docs.treasuryprime.com/.
+
+    '
+  contact:
+    name: Treasury Prime
+    url: https://developers.treasuryprime.com/
+servers:
+- url: https://api.sandbox.treasuryprime.com
+  description: Sandbox
+security:
+- BasicAuth: []
+tags:
+- name: Transactions
+paths:
+  /transaction:
+    get:
+      tags:
+      - Transactions
+      summary: List transactions
+      responses:
+        '200':
+          description: Transactions
+  /transaction/{id}:
+    get:
+      tags:
+      - Transactions
+      summary: Fetch a transaction
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Transaction
+    patch:
+      tags:
+      - Transactions
+      summary: Update a transaction
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Updated
+components:
+  securitySchemes:
+    BasicAuth:
+      type: http
+      scheme: basic
+      description: HTTP Basic Auth using API Key ID (username) and Secret (password).

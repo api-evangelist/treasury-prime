@@ -1,0 +1,85 @@
+openapi: 3.1.0
+info:
+  title: Treasury Prime Bank Accounts Webhooks API
+  version: '1'
+  description: 'REST API covering Accounts, Persons, Businesses, Cards, Payments
+
+    (ACH, Wire, Book, Check), Transactions, Statements, and Webhooks across
+
+    Treasury Prime''s network of sponsor banks. Endpoints derived from
+
+    https://docs.treasuryprime.com/.
+
+    '
+  contact:
+    name: Treasury Prime
+    url: https://developers.treasuryprime.com/
+servers:
+- url: https://api.sandbox.treasuryprime.com
+  description: Sandbox
+security:
+- BasicAuth: []
+tags:
+- name: Webhooks
+paths:
+  /webhook:
+    get:
+      tags:
+      - Webhooks
+      summary: List webhooks
+      responses:
+        '200':
+          description: Webhooks
+    post:
+      tags:
+      - Webhooks
+      summary: Create a webhook
+      responses:
+        '200':
+          description: Created
+  /webhook/{id}:
+    get:
+      tags:
+      - Webhooks
+      summary: Fetch a webhook
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Webhook
+    patch:
+      tags:
+      - Webhooks
+      summary: Update a webhook
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Updated
+    delete:
+      tags:
+      - Webhooks
+      summary: Delete a webhook
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        '204':
+          description: Deleted
+components:
+  securitySchemes:
+    BasicAuth:
+      type: http
+      scheme: basic
+      description: HTTP Basic Auth using API Key ID (username) and Secret (password).
