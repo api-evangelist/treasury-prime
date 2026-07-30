@@ -5,7 +5,20 @@ kind: company
 description: Treasury Prime is an embedded banking platform connecting fintechs and
   enterprises to a network of partner banks. Provides REST APIs for persons, businesses,
   accounts, cards, payments (ACH, wire, book), transactions, statements, and webhooks.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/treasury-prime.png
 tags:
   - FinTech
   - BaaS
@@ -17,31 +30,120 @@ created: '2026-05-08'
 modified: '2026-05-08'
 specificationVersion: '0.19'
 apis:
-  - aid: treasury-prime:rest-api
-    name: Treasury Prime Bank API
-    description: REST API covering Persons, Businesses, Accounts, Cards, Payments (ACH,
-      Wire, Book), Transactions, Statements, Counterparties, External Transfers, and
-      Webhooks across a network of sponsor banks.
-    humanURL: https://developers.treasuryprime.com/
-    baseURL: https://sandbox.treasuryprime.com/v1
-    tags:
-    - REST
-    - Banking
-    - Payments
-    properties:
-    - type: Documentation
-      url: https://developers.treasuryprime.com/
-  - aid: treasury-prime:webhooks
-    name: Treasury Prime Webhooks
-    description: Outbound HTTP webhook delivery for account, card, transaction, payment,
-      and KYC events.
-    humanURL: https://developers.treasuryprime.com/docs/webhooks
-    baseURL: https://sandbox.treasuryprime.com/v1/webhooks
-    tags:
-    - Webhooks
-    properties:
-    - type: Documentation
-      url: https://developers.treasuryprime.com/docs/webhooks
+- aid: treasury-prime:rest-api
+  name: Treasury Prime Bank API
+  description: >-
+    REST API covering Persons, Businesses, Accounts, Cards, Payments (ACH, Wire, Book), Transactions,
+    Statements, Counterparties, External Transfers, and Webhooks across a network of sponsor banks.
+  humanURL: https://developers.treasuryprime.com/
+  baseURL: https://sandbox.treasuryprime.com/v1
+  tags:
+  - REST
+  - Banking
+  - Payments
+  properties:
+  - type: Documentation
+    url: https://developers.treasuryprime.com/
+- aid: treasury-prime:webhooks
+  name: Treasury Prime Webhooks
+  description: Outbound HTTP webhook delivery for account, card, transaction, payment, and KYC events.
+  humanURL: https://developers.treasuryprime.com/docs/webhooks
+  baseURL: https://sandbox.treasuryprime.com/v1/webhooks
+  tags:
+  - Webhooks
+  properties:
+  - type: Documentation
+    url: https://developers.treasuryprime.com/docs/webhooks
+- aid: treasury-prime:treasury-prime-accounts-api
+  name: Treasury Prime Accounts API
+  description: The Accounts API from Treasury Prime — 2 operation(s) for accounts.
+  humanURL: https://developers.treasuryprime.com/
+  baseURL: https://sandbox.treasuryprime.com/v1
+  tags:
+  - Accounts
+  properties:
+  - type: OpenAPI
+    url: openapi/treasury-prime-accounts-api-openapi.yml
+- aid: treasury-prime:treasury-prime-businesses-api
+  name: Treasury Prime Businesses API
+  description: The Businesses API from Treasury Prime — 2 operation(s) for businesses.
+  humanURL: https://developers.treasuryprime.com/
+  baseURL: https://sandbox.treasuryprime.com/v1
+  tags:
+  - Businesses
+  properties:
+  - type: OpenAPI
+    url: openapi/treasury-prime-businesses-api-openapi.yml
+- aid: treasury-prime:treasury-prime-cards-api
+  name: Treasury Prime Cards API
+  description: The Cards API from Treasury Prime — 2 operation(s) for cards.
+  humanURL: https://developers.treasuryprime.com/
+  baseURL: https://sandbox.treasuryprime.com/v1
+  tags:
+  - Cards
+  properties:
+  - type: OpenAPI
+    url: openapi/treasury-prime-cards-api-openapi.yml
+- aid: treasury-prime:treasury-prime-health-api
+  name: Treasury Prime Health API
+  description: The Health API from Treasury Prime — 1 operation(s) for health.
+  humanURL: https://developers.treasuryprime.com/
+  baseURL: https://sandbox.treasuryprime.com/v1
+  tags:
+  - Health
+  properties:
+  - type: OpenAPI
+    url: openapi/treasury-prime-health-api-openapi.yml
+- aid: treasury-prime:treasury-prime-payments-api
+  name: Treasury Prime Payments API
+  description: The Payments API from Treasury Prime — 8 operation(s) for payments.
+  humanURL: https://developers.treasuryprime.com/
+  baseURL: https://sandbox.treasuryprime.com/v1
+  tags:
+  - Payments
+  properties:
+  - type: OpenAPI
+    url: openapi/treasury-prime-payments-api-openapi.yml
+- aid: treasury-prime:treasury-prime-persons-api
+  name: Treasury Prime Persons API
+  description: The Persons API from Treasury Prime — 1 operation(s) for persons.
+  humanURL: https://developers.treasuryprime.com/
+  baseURL: https://sandbox.treasuryprime.com/v1
+  tags:
+  - Persons
+  properties:
+  - type: OpenAPI
+    url: openapi/treasury-prime-persons-api-openapi.yml
+- aid: treasury-prime:treasury-prime-statements-api
+  name: Treasury Prime Statements API
+  description: The Statements API from Treasury Prime — 1 operation(s) for statements.
+  humanURL: https://developers.treasuryprime.com/
+  baseURL: https://sandbox.treasuryprime.com/v1
+  tags:
+  - Statements
+  properties:
+  - type: OpenAPI
+    url: openapi/treasury-prime-statements-api-openapi.yml
+- aid: treasury-prime:treasury-prime-transactions-api
+  name: Treasury Prime Transactions API
+  description: The Transactions API from Treasury Prime — 2 operation(s) for transactions.
+  humanURL: https://developers.treasuryprime.com/
+  baseURL: https://sandbox.treasuryprime.com/v1
+  tags:
+  - Transactions
+  properties:
+  - type: OpenAPI
+    url: openapi/treasury-prime-transactions-api-openapi.yml
+- aid: treasury-prime:treasury-prime-webhooks-api
+  name: Treasury Prime Webhooks API
+  description: The Webhooks API from Treasury Prime — 2 operation(s) for webhooks.
+  humanURL: https://developers.treasuryprime.com/
+  baseURL: https://sandbox.treasuryprime.com/v1
+  tags:
+  - Webhooks
+  properties:
+  - type: OpenAPI
+    url: openapi/treasury-prime-webhooks-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/treasury-prime-agentic-access.yml
