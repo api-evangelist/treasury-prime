@@ -1,0 +1,30 @@
+{
+  "provider": "treasury-prime",
+  "sources": [
+    "treasury-prime-accounts-api-openapi.yml",
+    "treasury-prime-businesses-api-openapi.yml",
+    "treasury-prime-cards-api-openapi.yml",
+    "treasury-prime-health-api-openapi.yml",
+    "treasury-prime-payments-api-openapi.yml",
+    "treasury-prime-persons-api-openapi.yml",
+    "treasury-prime-statements-api-openapi.yml",
+    "treasury-prime-transactions-api-openapi.yml",
+    "treasury-prime-webhooks-api-openapi.yml"
+  ],
+  "outputs": [
+    "treasury-prime-accounts-api-openapi.yml",
+    "treasury-prime-businesses-api-openapi.yml",
+    "treasury-prime-cards-api-openapi.yml",
+    "treasury-prime-health-api-openapi.yml",
+    "treasury-prime-payments-api-openapi.yml",
+    "treasury-prime-persons-api-openapi.yml",
+    "treasury-prime-statements-api-openapi.yml",
+    "treasury-prime-transactions-api-openapi.yml",
+    "treasury-prime-webhooks-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
