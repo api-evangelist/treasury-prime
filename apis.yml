@@ -145,6 +145,18 @@ apis:
   - type: OpenAPI
     url: openapi/treasury-prime-webhooks-api-openapi.yml
 common:
+  - type: Roadmap
+    url: https://www.treasuryprime.com/products/roadmap
+  - type: DeveloperPortal
+    url: https://www.treasuryprime.com/developers
+  - type: StatusPage
+    url: https://status.treasuryprime.com
+  - type: PrivacyPolicy
+    url: https://www.treasuryprime.com/policy/privacy
+  - type: TermsOfService
+    url: https://www.treasuryprime.com/policy/terms
+  - type: GettingStarted
+    url: https://docs.treasuryprime.com/docs/getting-started
   - type: AgenticAccess
     url: agentic-access/treasury-prime-agentic-access.yml
   - type: DomainSecurity
