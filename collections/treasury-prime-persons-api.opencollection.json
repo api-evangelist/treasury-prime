@@ -1,0 +1,61 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Treasury Prime Bank Accounts Persons API",
+    "version": "1"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Persons",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Fetch a person",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.sandbox.treasuryprime.com/person/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Fetch a person"
+        },
+        {
+          "info": {
+            "name": "Update a person",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.sandbox.treasuryprime.com/person/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update a person"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

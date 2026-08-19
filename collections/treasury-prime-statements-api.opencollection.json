@@ -1,0 +1,47 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Treasury Prime Bank Accounts Statements API",
+    "version": "1"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Statements",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Fetch a statement",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.sandbox.treasuryprime.com/account/statement"
+          },
+          "docs": "Fetch a statement"
+        },
+        {
+          "info": {
+            "name": "Generate a statement",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.sandbox.treasuryprime.com/account/statement"
+          },
+          "docs": "Generate a statement"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

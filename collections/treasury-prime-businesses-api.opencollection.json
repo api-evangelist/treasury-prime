@@ -1,0 +1,72 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Treasury Prime Bank Accounts Businesses API",
+    "version": "1"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Businesses",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List businesses",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.sandbox.treasuryprime.com/business"
+          },
+          "docs": "List businesses"
+        },
+        {
+          "info": {
+            "name": "Fetch a business",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.sandbox.treasuryprime.com/business/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Fetch a business"
+        },
+        {
+          "info": {
+            "name": "Update a business",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.sandbox.treasuryprime.com/business/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update a business"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

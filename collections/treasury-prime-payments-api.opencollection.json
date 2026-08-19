@@ -1,0 +1,239 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Treasury Prime Bank Accounts Payments API",
+    "version": "1"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Payments",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List ACH transfers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.sandbox.treasuryprime.com/ach"
+          },
+          "docs": "List ACH transfers"
+        },
+        {
+          "info": {
+            "name": "Create an ACH transfer",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.sandbox.treasuryprime.com/ach"
+          },
+          "docs": "Create an ACH transfer"
+        },
+        {
+          "info": {
+            "name": "Fetch an ACH transfer",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.sandbox.treasuryprime.com/ach/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Fetch an ACH transfer"
+        },
+        {
+          "info": {
+            "name": "Update an ACH transfer",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.sandbox.treasuryprime.com/ach/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update an ACH transfer"
+        },
+        {
+          "info": {
+            "name": "List book transfers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.sandbox.treasuryprime.com/book"
+          },
+          "docs": "List book transfers"
+        },
+        {
+          "info": {
+            "name": "Create a book transfer",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.sandbox.treasuryprime.com/book"
+          },
+          "docs": "Create a book transfer"
+        },
+        {
+          "info": {
+            "name": "Fetch a book transfer",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.sandbox.treasuryprime.com/book/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Fetch a book transfer"
+        },
+        {
+          "info": {
+            "name": "Update a book transfer",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.sandbox.treasuryprime.com/book/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update a book transfer"
+        },
+        {
+          "info": {
+            "name": "List issued checks",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.sandbox.treasuryprime.com/check"
+          },
+          "docs": "List issued checks"
+        },
+        {
+          "info": {
+            "name": "Issue a check",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.sandbox.treasuryprime.com/check"
+          },
+          "docs": "Issue a check"
+        },
+        {
+          "info": {
+            "name": "Fetch an issued check",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.sandbox.treasuryprime.com/check/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Fetch an issued check"
+        },
+        {
+          "info": {
+            "name": "Update an issued check",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.sandbox.treasuryprime.com/check/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update an issued check"
+        },
+        {
+          "info": {
+            "name": "List check deposits",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.sandbox.treasuryprime.com/check_deposit"
+          },
+          "docs": "List check deposits"
+        },
+        {
+          "info": {
+            "name": "Create a check deposit",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.sandbox.treasuryprime.com/check_deposit"
+          },
+          "docs": "Create a check deposit"
+        },
+        {
+          "info": {
+            "name": "Fetch a check deposit",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.sandbox.treasuryprime.com/check_deposit/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Fetch a check deposit"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
