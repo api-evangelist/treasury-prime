@@ -172,6 +172,9 @@ apis:
   - type: OpenAPI
     url: openapi/treasury-prime-webhooks-api-openapi.yml
 common:
+  - type: CapabilityMap
+    url: capabilities/treasury-prime-capability-edges.yml
+    name: Treasury Prime Business Capability Map
   - type: Roadmap
     url: https://www.treasuryprime.com/products/roadmap
   - type: DeveloperPortal
