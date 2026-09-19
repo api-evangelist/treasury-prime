@@ -94,6 +94,8 @@ apis:
   humanURL: https://developers.treasuryprime.com/
   baseURL: https://sandbox.treasuryprime.com/v1
   tags:
+  - Business
+  tags_raw:
   - Businesses
   properties:
   - type: OpenAPI
