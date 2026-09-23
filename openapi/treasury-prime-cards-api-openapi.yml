@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Treasury Prime Bank Accounts Cards API
+  title: Treasury Prime Bank Cards API
   version: '1'
   description: 'REST API covering Accounts, Persons, Businesses, Cards, Payments
 
@@ -8,9 +8,7 @@ info:
 
     Treasury Prime''s network of sponsor banks. Endpoints derived from
 
-    https://docs.treasuryprime.com/.
-
-    '
+    https://docs.treasuryprime.com/.'
   contact:
     name: Treasury Prime
     url: https://developers.treasuryprime.com/
@@ -30,6 +28,8 @@ paths:
       responses:
         '200':
           description: Cards
+      operationId: getCard
+      x-operation-id-source: derived
     post:
       tags:
       - Cards
@@ -37,6 +37,8 @@ paths:
       responses:
         '200':
           description: Created
+      operationId: postCard
+      x-operation-id-source: derived
   /card/{id}:
     get:
       tags:
@@ -51,6 +53,8 @@ paths:
       responses:
         '200':
           description: Card
+      operationId: getCardById
+      x-operation-id-source: derived
     patch:
       tags:
       - Cards
@@ -64,6 +68,8 @@ paths:
       responses:
         '200':
           description: Updated
+      operationId: patchCardById
+      x-operation-id-source: derived
 components:
   securitySchemes:
     BasicAuth:

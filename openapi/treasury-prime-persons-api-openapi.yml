@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Treasury Prime Bank Accounts Persons API
+  title: Treasury Prime Bank Persons API
   version: '1'
   description: 'REST API covering Accounts, Persons, Businesses, Cards, Payments
 
@@ -8,9 +8,7 @@ info:
 
     Treasury Prime''s network of sponsor banks. Endpoints derived from
 
-    https://docs.treasuryprime.com/.
-
-    '
+    https://docs.treasuryprime.com/.'
   contact:
     name: Treasury Prime
     url: https://developers.treasuryprime.com/
@@ -36,6 +34,8 @@ paths:
       responses:
         '200':
           description: Person
+      operationId: getPersonById
+      x-operation-id-source: derived
     patch:
       tags:
       - Persons
@@ -49,6 +49,8 @@ paths:
       responses:
         '200':
           description: Updated
+      operationId: patchPersonById
+      x-operation-id-source: derived
 components:
   securitySchemes:
     BasicAuth:

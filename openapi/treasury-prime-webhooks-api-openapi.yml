@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Treasury Prime Bank Accounts Webhooks API
+  title: Treasury Prime Bank Webhooks API
   version: '1'
   description: 'REST API covering Accounts, Persons, Businesses, Cards, Payments
 
@@ -8,9 +8,7 @@ info:
 
     Treasury Prime''s network of sponsor banks. Endpoints derived from
 
-    https://docs.treasuryprime.com/.
-
-    '
+    https://docs.treasuryprime.com/.'
   contact:
     name: Treasury Prime
     url: https://developers.treasuryprime.com/
@@ -30,6 +28,8 @@ paths:
       responses:
         '200':
           description: Webhooks
+      operationId: getWebhook
+      x-operation-id-source: derived
     post:
       tags:
       - Webhooks
@@ -37,6 +37,8 @@ paths:
       responses:
         '200':
           description: Created
+      operationId: postWebhook
+      x-operation-id-source: derived
   /webhook/{id}:
     get:
       tags:
@@ -51,6 +53,8 @@ paths:
       responses:
         '200':
           description: Webhook
+      operationId: getWebhookById
+      x-operation-id-source: derived
     patch:
       tags:
       - Webhooks
@@ -64,6 +68,8 @@ paths:
       responses:
         '200':
           description: Updated
+      operationId: patchWebhookById
+      x-operation-id-source: derived
     delete:
       tags:
       - Webhooks
@@ -77,6 +83,8 @@ paths:
       responses:
         '204':
           description: Deleted
+      operationId: deleteWebhookById
+      x-operation-id-source: derived
 components:
   securitySchemes:
     BasicAuth:

@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Treasury Prime Bank Accounts Payments API
+  title: Treasury Prime Bank Payments API
   version: '1'
   description: 'REST API covering Accounts, Persons, Businesses, Cards, Payments
 
@@ -8,9 +8,7 @@ info:
 
     Treasury Prime''s network of sponsor banks. Endpoints derived from
 
-    https://docs.treasuryprime.com/.
-
-    '
+    https://docs.treasuryprime.com/.'
   contact:
     name: Treasury Prime
     url: https://developers.treasuryprime.com/
@@ -30,6 +28,8 @@ paths:
       responses:
         '200':
           description: ACH list
+      operationId: getAch
+      x-operation-id-source: derived
     post:
       tags:
       - Payments
@@ -37,6 +37,8 @@ paths:
       responses:
         '200':
           description: ACH created
+      operationId: postAch
+      x-operation-id-source: derived
   /ach/{id}:
     get:
       tags:
@@ -51,6 +53,8 @@ paths:
       responses:
         '200':
           description: ACH
+      operationId: getAchById
+      x-operation-id-source: derived
     patch:
       tags:
       - Payments
@@ -64,6 +68,8 @@ paths:
       responses:
         '200':
           description: Updated
+      operationId: patchAchById
+      x-operation-id-source: derived
   /book:
     get:
       tags:
@@ -72,6 +78,8 @@ paths:
       responses:
         '200':
           description: Book transfer list
+      operationId: getBook
+      x-operation-id-source: derived
     post:
       tags:
       - Payments
@@ -79,6 +87,8 @@ paths:
       responses:
         '200':
           description: Created
+      operationId: postBook
+      x-operation-id-source: derived
   /book/{id}:
     get:
       tags:
@@ -93,6 +103,8 @@ paths:
       responses:
         '200':
           description: Book transfer
+      operationId: getBookById
+      x-operation-id-source: derived
     patch:
       tags:
       - Payments
@@ -106,6 +118,8 @@ paths:
       responses:
         '200':
           description: Updated
+      operationId: patchBookById
+      x-operation-id-source: derived
   /check:
     get:
       tags:
@@ -114,6 +128,8 @@ paths:
       responses:
         '200':
           description: Checks
+      operationId: getCheck
+      x-operation-id-source: derived
     post:
       tags:
       - Payments
@@ -121,6 +137,8 @@ paths:
       responses:
         '200':
           description: Created
+      operationId: postCheck
+      x-operation-id-source: derived
   /check/{id}:
     get:
       tags:
@@ -135,6 +153,8 @@ paths:
       responses:
         '200':
           description: Check
+      operationId: getCheckById
+      x-operation-id-source: derived
     patch:
       tags:
       - Payments
@@ -148,6 +168,8 @@ paths:
       responses:
         '200':
           description: Updated
+      operationId: patchCheckById
+      x-operation-id-source: derived
   /check_deposit:
     get:
       tags:
@@ -156,6 +178,8 @@ paths:
       responses:
         '200':
           description: Deposits
+      operationId: getCheckDeposit
+      x-operation-id-source: derived
     post:
       tags:
       - Payments
@@ -163,6 +187,8 @@ paths:
       responses:
         '200':
           description: Created
+      operationId: postCheckDeposit
+      x-operation-id-source: derived
   /check_deposit/{id}:
     get:
       tags:
@@ -177,6 +203,8 @@ paths:
       responses:
         '200':
           description: Deposit
+      operationId: getCheckDepositById
+      x-operation-id-source: derived
 components:
   securitySchemes:
     BasicAuth:
