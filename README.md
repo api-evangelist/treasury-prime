@@ -1,4 +1,4 @@
-# Treasury Prime (treasury-prime)
+# Treasury Prime
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,70 +66,137 @@
 
 Treasury Prime is an embedded banking platform connecting fintechs and enterprises to a network of partner banks. Provides REST APIs for persons, businesses, accounts, cards, payments (ACH, wire, book), transactions, statements, and webhooks.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/treasury-prime/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/treasury-prime/refs/heads/main/apis.yml)
+**Areas:** Fintech · Banking as a Service · Banking · Payments · Card Issuing · ACH · Embedded Finance
 
-## Tags
+## Treasury Prime on APIs.io
 
-- FinTech
-- BaaS
-- Banking
-- Payments
-- Card Issuing
-- ACH
+Everything profiled for Treasury Prime is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/treasury-prime/](https://apis.io/providers/treasury-prime/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (11)
 
-- **Created:** 2026-05-08
-- **Modified:** 2026-05-08
+- [Treasury Prime Bank API](https://apis.io/apis/treasury-prime/rest-api/) — REST API covering Persons, Businesses, Accounts, Cards, Payments (ACH, Wire, Book), Transactions, Statements, Counterparties, External Transfers, and…
+- [Treasury Prime Webhooks](https://apis.io/apis/treasury-prime/webhooks/) — Outbound HTTP webhook delivery for account, card, transaction, payment, and KYC events.
+- [Treasury Prime Accounts API](https://apis.io/apis/treasury-prime/treasury-prime-accounts-api/) — The Accounts API from Treasury Prime — 2 operation(s) for accounts.
+- [Treasury Prime Businesses API](https://apis.io/apis/treasury-prime/treasury-prime-businesses-api/) — The Businesses API from Treasury Prime — 2 operation(s) for businesses.
+- [Treasury Prime Cards API](https://apis.io/apis/treasury-prime/treasury-prime-cards-api/) — The Cards API from Treasury Prime — 2 operation(s) for cards.
+- [Treasury Prime Health API](https://apis.io/apis/treasury-prime/treasury-prime-health-api/) — The Health API from Treasury Prime — 1 operation(s) for health.
+- [Treasury Prime Payments API](https://apis.io/apis/treasury-prime/treasury-prime-payments-api/) — The Payments API from Treasury Prime — 8 operation(s) for payments.
+- [Treasury Prime Persons API](https://apis.io/apis/treasury-prime/treasury-prime-persons-api/) — The Persons API from Treasury Prime — 1 operation(s) for persons.
+- [Treasury Prime Statements API](https://apis.io/apis/treasury-prime/treasury-prime-statements-api/) — The Statements API from Treasury Prime — 1 operation(s) for statements.
+- [Treasury Prime Transactions API](https://apis.io/apis/treasury-prime/treasury-prime-transactions-api/) — The Transactions API from Treasury Prime — 2 operation(s) for transactions.
+- [Treasury Prime Webhooks API](https://apis.io/apis/treasury-prime/treasury-prime-webhooks-api/) — The Webhooks API from Treasury Prime — 2 operation(s) for webhooks.
 
-## APIs
+### Published properties
 
-### Treasury Prime Bank API
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-REST API covering Persons, Businesses, Accounts, Cards, Payments (ACH, Wire, Book), Transactions, Statements, Counterparties, External Transfers, and Webhooks across a network of sponsor banks.
+#### Agentic access (1)
 
-- **Human URL:** [https://developers.treasuryprime.com/](https://developers.treasuryprime.com/)
-- **Base URL:** `https://sandbox.treasuryprime.com/v1`
+Which operations an agent can call, which act, and which need a human in the loop.
 
-#### Tags
+- [Treasury Prime Agentic Access](https://apis.io/agentic-access/treasury-prime/treasury-prime-agentic-access/)
 
-- REST
-- Banking
-- Payments
+#### Collections (10)
 
-#### Properties
+Postman and Open Collection request collections.
 
-- [Documentation](https://developers.treasuryprime.com/)
-- [Postman Collection](collections/treasury-prime.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/treasury-prime.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Treasury Prime Bank API](https://apis.io/collections/treasury-prime/open-treasury-prime/)
+- [Treasury Prime Bank Accounts API](https://apis.io/collections/treasury-prime/open-treasury-prime-accounts-api/)
+- [Treasury Prime Bank Accounts Businesses API](https://apis.io/collections/treasury-prime/open-treasury-prime-businesses-api/)
+- [Treasury Prime Bank Accounts Cards API](https://apis.io/collections/treasury-prime/open-treasury-prime-cards-api/)
+- [Treasury Prime Bank Accounts Health API](https://apis.io/collections/treasury-prime/open-treasury-prime-health-api/)
+- [Treasury Prime Bank Accounts Payments API](https://apis.io/collections/treasury-prime/open-treasury-prime-payments-api/)
+- [Treasury Prime Bank Accounts Persons API](https://apis.io/collections/treasury-prime/open-treasury-prime-persons-api/)
+- [Treasury Prime Bank Accounts Statements API](https://apis.io/collections/treasury-prime/open-treasury-prime-statements-api/)
+- [Treasury Prime Bank Accounts Transactions API](https://apis.io/collections/treasury-prime/open-treasury-prime-transactions-api/)
+- [Treasury Prime Bank Accounts Webhooks API](https://apis.io/collections/treasury-prime/open-treasury-prime-webhooks-api/)
 
-### Treasury Prime Webhooks
+#### Security (2)
 
-Outbound HTTP webhook delivery for account, card, transaction, payment, and KYC events.
+Authentication, trust centre, and vulnerability disclosure.
 
-- **Human URL:** [https://developers.treasuryprime.com/docs/webhooks](https://developers.treasuryprime.com/docs/webhooks)
-- **Base URL:** `https://sandbox.treasuryprime.com/v1/webhooks`
+- [Treasury Prime Authentication](https://apis.io/security/treasury-prime/treasury-prime-authentication/)
+- [Treasury Prime Domain Security](https://apis.io/security/treasury-prime/treasury-prime-domain-security/)
 
-#### Tags
+#### Plans and pricing (1)
 
-- Webhooks
+Published plans, tiers and prices.
 
-#### Properties
+- [Treasury Prime Plans Pricing](https://apis.io/plans/treasury-prime/treasury-prime-plans-pricing/)
 
-- [Documentation](https://developers.treasuryprime.com/docs/webhooks)
-- [Postman Collection](collections/treasury-prime.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/treasury-prime.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+#### Rate limits (1)
 
-## Common Properties
+Published request limits.
 
-- [GitHub Organization](https://github.com/treasuryprime)
-- [LinkedIn](https://www.linkedin.com/company/treasuryprime)
+- [Treasury Prime Rate Limits](https://apis.io/rate-limits/treasury-prime/treasury-prime-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Treasury Prime Finops](https://apis.io/finops/treasury-prime/treasury-prime-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://www.treasuryprime.com/)
-- [Plans](plans/treasury-prime-plans-pricing.yml)
-- [Rate Limits](rate-limits/treasury-prime-rate-limits.yml)
-- [Fin Ops](finops/treasury-prime-finops.yml)
+- [Getting started](https://docs.treasuryprime.com/docs/getting-started)
+- [Blog](https://www.treasuryprime.com/blog)
+- [Terms of service](https://www.treasuryprime.com/policy/terms)
+- [Privacy policy](https://www.treasuryprime.com/policy/privacy)
+- [GitHub](https://github.com/treasuryprime)
+- [Status](https://status.treasuryprime.com)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 34.5** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 46.8 |
+| Contract governance | 0.0 |
+| Operational transparency | 28.9 |
+| Developer ergonomics | 40.5 |
+| Access clarity | 26.3 |
+
+**Agent readiness 17.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 17.9** — Payments
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/treasury-prime/](https://apis.io/providers/treasury-prime/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Treasury Prime: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/treasury-prime/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
